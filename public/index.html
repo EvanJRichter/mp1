@@ -2,15 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MP1 Starter</title>
+  <title>MP1 - Evan Richter</title>
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./media/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./media/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="./media/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./media/favicon.ico">
 </head>
+
 <body>
-  <h1>Hello World!</h1>
-  <div class="test"> My name is Anthony.</div>
-  <div class="cat">
-    <img src="./media/cat.jpg" alt="Cat">
+  <div class="navBar">
+    <ul>
+      <li class="navButton navBarHover" id="aboutmeNav"><a href="#aboutme">About</a></li>
+      <li class="navButton"  id="designNav"><a href="#design">Design</a></li>
+      <li class="navButton"  id="photographyNav"><a href="#photography">Photography</a></li>
+      <li class="navButton"  id="videoNav"><a href="#video">Video</a></li>
+      <li class="navButton"  id="contactNav"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="pusher"> </div>
+  <div class="section" id="aboutme">
+
+    <div class="columns">
+      <h1>  Hello! I am Evan Richter. </h1> <br/>
+      <p>I am a senior at the University of Illinois at Urbana-Champaign, majoring in Computer Science and minoring in Art+Design. My interests range from web development and data visualization to photography and videograpy. </p> <br/>
+      <p>This past summer, I interned at <a href="vodori.com">Vodori<a> in Chicago where I worked on enterprise application development, utilizing Java Spring, Angular 2, HapiJS, and more.</p> <br/>
+      <p>The summer before that I worked at Dow Chemical doing web development, and the summer before that I worked at John Deere doing Android Development.</p> <br/>
+      <p>At UIUC I am the web director of <a href="pizzafm.org">Pizza FM</a>, a student run radio station. I designed and built their website and android application.</p> <br/>
+      <p>I am the president of <a href="youtube.com/user/pottedmeatsketchcomedy">Potted Meat Sketch Comedy</a> where I write, direct, and perform in live and video comedic sketches.</p> <br/>
+      <p>I am a member of the <a href="kappathetatau.org">Kappa Chapter of Theta Tau</a>, a co-ed professional engineering fraternity. Last year I was the Public Relations Chair, where I designed web content, print content, and apparel. This year I am the Historian, where I document chapter goings-on</p> <br/>
+
+
+      <p> On this website I will be hosting both my technical and artistic projects.</p> <br/>
+      <h1 id="modalButton">Click here to see my resume.</h1>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span id="close" class="white-text">X</span>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <embed class="resume" src="./media/EvanRichterResumeFall2016.pdf" type='application/pdf'>
+      </div>
+
+    </div>
+  </div>
+  <div class="section fixed-bg" id="design">
+    <h1 class="text-content white-text"> 
+      I am also an avid fan of design, photography, and videography. <br/>
+      Below are examples of my work.
+    </h1>
+  </div>
+
+  <div class="section" id="photography"> 
+    <div class="carousel">
+      <ul>
+        <li><img class="carouselImage" value="0" src="./media/clouds.jpg" alt="Clouds"></li>
+        <li><img class="carouselImage" value="1" src="./media/entrance.jpg" alt="Entrance"></li>
+        <li><img class="carouselImage" value="2" src="./media/fire.jpg" alt="Fire"></li>
+      </ul>
+    </div>
+      <div class="carouselOverlay">
+        <a><i id="leftArrow" class="fa fa-long-arrow-left" aria-hidden="true"></i></a>
+        <a><i id="rightArrow" class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+      </div>
+  </div>
+  <div class="section" id="video"> 
+    <video class="videoplayer" autoplay controls muted>
+      <source src="./media/redemption.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="section" id="contact">
+    <div class="text-content"> 
+      <h3>Contact me!<h3> <br/>
+      <h1>
+        EvanRichter.dev@gmail.com
+        <a href="https://www.instagram.com/evanjrichter/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.facebook.com/WillGould"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      </h1>
+    </div>
+  </div>
+
+  <div class="footer" >
+    <h6> 
+      Copyright (not really) Evan Richter (that's me) All Rights Reserved (whatever that means)
+    </h6>
   </div>
 
   <script src="lib/jquery-2.1.3.min/index.js"></script>

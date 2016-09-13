@@ -1,13 +1,236 @@
-@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
+@import url('http://fonts.googleapis.com/css?family=Playfair+Display');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-
+body{
+	font-family: "Playfair Display";
+	color: lighten($black, 10);
+}
+a {
+	color: inherit;
+}
 h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+	font-size: $font-size-heading;
+	color: lighten($black, 10);
+	font-family: "Playfair Display";
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+input, button, submit { 
+	border:none; background: none;
 }
+
+.navBar{
+	z-index: 10;
+	position: fixed;
+	min-height: 5vh;
+	height: auto;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px;
+	border-style: solid;
+	width: 100%;
+	color: lighten($black, 10);
+}
+
+.navBar li {
+	float: left;
+}
+
+.navBar li a {
+    display: inline-block;
+    text-align: center;
+    padding: 10px ;
+    text-decoration: none;
+    transition: 0.2s;
+    text-align: right;
+}
+
+.navBarHover{
+	background-color: lighten($black, 10);
+	color: #ffffff;
+}
+
+.navShrink{
+	min-height: 2vh;
+	height: 2vh;
+	font-size: $font-size-small;
+}
+
+.pusher{
+	z-index: -10;
+	height: 5vh;
+}
+
+.section {
+	position: relative;
+	width: 100%;
+	height: $section-height; 
+	border: 1px;
+	border-style: solid;
+}
+
+.section .text-content{
+	text-align: center;
+	@include vertical-align;
+}
+
+
+div .columns{
+	padding: 10vh;
+	padding: 10vh;
+	height: inherit;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    -webkit-column-width: 150px;
+    -moz-column-width: 150px;
+    column-width: 150px;
+
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+}
+
+/*Carousel Stuff*/
+
+#photography {
+	background-color: #000;/*lighten($black, 10);*/
+}
+.carousel {
+	/*position: relative;*/
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	max-height: $section-height;
+}
+
+.carouselImage {
+	/*width: auto;
+	min-width: 100vw; /*have it not stretch. make BG black or something.*/
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%); /*Firefox, Explorer, others*/
+    max-height: $section-height;
+} 
+
+.carouselOverlay{
+	z-index: 5;
+	position: absolute; 
+	height: 5vh; 
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+	vertical-align: middle;
+	background-color:rgba(255,255,255,.15);
+}
+
+.carouselOverlay #leftArrow{
+	vertical-align: middle;
+	line-height: $section-height-negative;
+	text-align: left;
+	float: left;
+	margin-right: 10vw;
+	margin-left: 10vw;
+}
+
+.carouselOverlay #rightArrow{
+	vertical-align: middle;
+	line-height: $section-height-negative;
+	float: right;
+	text-align: right;
+	margin-right: 10vw;
+	margin-left: 10vw;
+}
+
+.fixed-bg {
+    background-image: url("../media/clouds.jpg");
+    min-height: $section-height;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer{
+	height: $section-height-negative;
+	background-color: lighten($black, 10);
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: $section-height-negative;
+	font-size: $font-size-small;      
+}
+
+/*Modal Stuff*/
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: $section-height-negative;
+    width: 80%; 
+    height: 100%;
+}
+
+.resume {
+	width: 100%;
+	height: 100%;
+}
+
+#close {
+    font-size: $font-size-extra-large;
+    float: right;
+    margin: $section-height-negative;
+}
+
+/*Video Stuff*/
+.videoplayer {
+	position: absolute;
+	width: $section-width;
+	height: auto;
+    max-height: $section-height;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#video {
+	background-color: #000;
+}
+
+.white-text{
+	color: #fff;	
+}
+
+#aboutme {
+	height: auto;
+	font-size: $font-size-regular;
+}
+
+@media only screen and (max-width: 767px) {
+
+   columns {
+      font-size: 0.5rem;
+   }
+
+
+}
+
+
+
